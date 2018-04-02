@@ -56,7 +56,8 @@ for (i in seq(numIterations)){
 df <- melt(data.frame(probabilities), id.vars = c("iteration"))
 ggplot(aes(x=iteration,y=value),data=subset(df, variable == "target")) +
   geom_line(aes(group = variable)) +
-  theme_base()
+  theme_base() +
+  ylab("Probability")
 
 assertthat::assert_that(meassurement(quaSys)==1022)
 
