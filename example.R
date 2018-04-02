@@ -31,18 +31,31 @@ applyDifussion(quaSys)
 assertthat::assert_that(quaSys@qbitVector[1]>0)
 
 # Init quantum system
-quaSys <- init_system(nQubits = 13)
+targetQBit <- 1023
+quaSys <- init_system(nQubits = 14)
 # Grover's search
-for (i in seq(100)){
+numIterations <- 100
+# Data sctructures to save probabilities (only for visualization purposes)
+probabilities <- matrix(ncol = 3, nrow = numIterations)
+colnames(probabilities) <- c("iteration", "target", "another")
+for (i in seq(numIterations)){
   # Set target through oracle function
-  applyOracleFunction(quaSys, target = 1022)
+  applyOracleFunction(quaSys, target = targetQBit)
   # Apply hadamard
   applyHadamard(quaSys)
   # Apply difusion
   applyDifussion(quaSys)
   # Apply hadamard
   applyHadamard(quaSys)
+  # Save probabilities for plot 
+  probabilities[i, "iteration"] <- i
+  probabilities[i, "target"] <- quaSys@qbitVector[targetQBit+1]
+  probabilities[i, "another"] <- quaSys@qbitVector[targetQBit+2]
 }
-assertthat::assert_that(meassurement(quaSys)==1022)
+# Plot results
+df <- melt(data.frame(probabilities), id.vars = c("iteration"))
+ggplot(aes(x=iteration,y=value),data=subset(df, variable == "target")) +
+  geom_line(aes(group = variable))
 
+assertthat::assert_that(meassurement(quaSys)==1022)
 
