@@ -59,5 +59,5 @@ ggplot(aes(x=iteration,y=value),data=subset(df, variable == "target")) +
   theme_base() +
   ylab("Probability")
 
-assertthat::assert_that(meassurement(quaSys)==1022)
+assertthat::assert_that(meassurement(quaSys)==targetQBit)
 
