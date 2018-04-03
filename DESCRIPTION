@@ -1,11 +1,11 @@
 Package: quantumSystem
 Type: Package
-Title: What the Package Does (Title Case)
-Version: 0.1.0
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Title: Simple simulation of quantum system
+Version: 1.0.0
+Author: Roberto Maestre
+Maintainer: Roberto Maestre <rmaestre@gmail.com>
+Description: Simple simulation of quantum system through Rcpp and RcppArmadillo
+License: Apache 2.0
 LazyData: TRUE
 Imports:
     Rcpp,
