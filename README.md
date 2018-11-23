@@ -2,7 +2,7 @@
 
 A simple Quantum System in CPP through Rcpp interface. The code is based on the marvellous implementation of ["Quantum Computer Gate Playground"](http://davidbkemp.github.io/quantum-gate-playground/).
 
-A brief introduction to *Quantum Computing* can be found [here](pdf/tbd.pdf). This article provides a brief introduction to the main concepts and operations on a Quantum Computing. All concepts are mainly based on [Quantum Computing since Democritus](https://www.amazon.es/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565) and these [lectures notes](https://cs.uwaterloo.ca/~watrous/CPSC519/LectureNotes/all.pdf).
+A brief introduction to *Quantum Computing* can be found [here](pdf/Quantum_Computing_Notes.pdf). This article provides a brief introduction to the main concepts and operations on a Quantum Computing. All concepts are mainly based on [Quantum Computing since Democritus](https://www.amazon.es/Quantum-Computing-since-Democritus-Aaronson/dp/0521199565) and these [lectures notes](https://cs.uwaterloo.ca/~watrous/CPSC519/LectureNotes/all.pdf).
 
 ## Quantum system based on S4 Objects
 
